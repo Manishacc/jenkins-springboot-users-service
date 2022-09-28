@@ -22,7 +22,7 @@ pipeline {
         
         
         
-        stage('build') {
+        stage('package') {
             steps {
                 sh 'mvn package -DskipTests=true'
             }
