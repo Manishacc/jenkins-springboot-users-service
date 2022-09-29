@@ -1,7 +1,7 @@
 pipeline {
   agent any
   
-  evironment{
+  environment{
   		DOCKER_IMG_NAME= 'user-service'
   		DOCKER_TMP_CONTAINER_NAME = 'tmp-user-service-container'
   }
