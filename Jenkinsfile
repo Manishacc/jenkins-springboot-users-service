@@ -54,6 +54,8 @@ pipeline {
     always{
     echo 'stopped and removing user-service-container'
     	sh 'docker stop ${DOCKER_TMP_CONTAINER_NAME}'
+    	sh 'docker rmi ${DOCKER_IMG_NAME}: latest ${DOCKER_IMG_NAME}:${env.BUILD_ID}'
+    	
     	}
     }
 }
