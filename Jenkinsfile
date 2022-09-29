@@ -44,7 +44,7 @@ pipeline {
         stage('integration tests'){
         	steps{
         		echo 'running the temp-user-service for integration test'
-        		sh "docker run -dp 7070:8080 --rm --name ${DOCKER_TMP_CONTAINER_NAME} ${DOCKER_IMG_NAME}:latest"
+        		sh "docker run -dp 7070:8080 --rm --name ${DOCKER_TMP_CONTAINER_NAME} ${DOCKER_REPO}/${DOCKER_IMG_NAME}:latest"
         		sleep 30
         		sh 'curl -i http://localhost:7070/api/users'
         	}
